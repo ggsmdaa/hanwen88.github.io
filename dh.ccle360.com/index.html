@@ -1,0 +1,1147 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+	<meta http-equiv="expires" content="0">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <script src="//code.tidio.co/bqauf39voj2cntbwgykyyof2odsrdn0h.js" async></script>
+	<title>斯密达导航</title>
+	<style>
+		* {
+		margin: 0 auto;
+		padding: 0;
+		font-family: Arial, 微软雅黑, "Microsoft YaHei"
+	}
+
+	body {
+		min-width: 1065px;
+		position: absolute
+	}
+
+	.L {
+		margin-left: 2%;
+		margin-top: .5%;
+		margin-bottom: 1%;
+		width: 190px;
+		height: 60px;
+		color: white;
+		background: rgba(26, 26, 143, 0.4);
+		text-align: center;
+		text-shadow: 0 0 10px #000;
+		line-height: 60px;
+		font-size: 20px;
+		display: inline;
+		box-shadow: 0 0 10px #b4b0b1;
+		float: left;
+		transition: .2s
+	}
+
+	.L:hover {
+		color: yellow;
+		box-shadow: 0 0 5px white inset;
+		transform: scale(1.4)
+	}
+
+	#TopFrame {
+		position: sticky;
+		top: 20px;
+		z-index: 3;
+		min-width: 350px;
+		min-height: 170px;
+		width: 85%;
+		margin-top: 3%;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		overflow: hidden
+	}
+
+	#SearchForm {
+		padding-bottom: 3px;
+		border-radius: 5px
+	}
+
+	.mb {
+		margin-left: 3%;
+		margin-top: 50px;
+		height: 80px;
+		width: 15%;
+		border: 1px solid white;
+		background: rgba(75, 105, 225, 0.9);
+		color: white;
+		font-size: 30px;
+		transition: .1s
+	}
+
+	.mb:hover {
+		transform: scale(1.1)
+	}
+
+	#txtSearch {
+		position: relative;
+		top: -20px;
+		left: 1%;
+		z-index: 3;
+		width: 98%;
+		height: 60px;
+		font-size: 25px;
+		border-radius: 2px;
+		border: 0;
+		text-indent: 10px;
+		color: gray;
+		transition: .8s
+	}
+
+	#input-bg {
+		position: relative;
+		top: 50px;
+		z-index: 1;
+		background: linear-gradient(90deg, #4285f4 0, #4285f4 16.666%, #db4437 16.666%, #db4437 33.333%, #f4b400 33.333%, #f4b400 49.999%, #4285f4 49.999%, #4285f4 66.666%, #df9d58 66.666%, #df9d58 83.333%, #db4437 83.333%, #db4437 100%);
+		width: 100%;
+		height: 80px;
+		opacity: 0;
+		transition: .8s
+	}
+
+	.topframeFloat {
+		float: left
+	}
+
+	#wrapper {
+		position: relative;
+		top: 40px;
+		width: 80%;
+		min-width: 370px;
+		min-height: 300px;
+		margin-top: 0;
+		padding-top: 1px;
+		text-align: center;
+		border-radius: 10px
+	}
+
+	#IndexBackground {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 120%;
+		overflow: hidden;
+		z-index: -1;
+		text-align: center;
+		background: rgb(9, 16, 60);
+	}
+
+
+
+	#searchBox {
+		width: 55%;
+		margin-left: 3%;
+		height: 50px
+	}
+
+		#versionInfo {
+			position: fixed;
+			bottom: 0;
+			left:0;
+			color: #f90;
+			width: 100%;
+			background: rgba(0, 0, 0, 0.66);
+			margin-left: auto;
+			margin-right: auto
+		}
+
+	#searchLogo {
+		margin-top: 10px;
+		margin-left: 10px;
+		width: 126px;
+		height: 150px;
+		background: url("bg/searchlogo.png");
+		background-size: 100%;
+		transition: .2s
+	}
+
+	#searchLogo:hover {
+		outline: 3px solid rgba(74, 80, 255, 0.76)
+	}
+
+	.s-logo-baidu {
+		background-position: 0 0
+	}
+
+	.t {
+		min-width: 350px;
+		float: left;
+		margin: 0 auto;
+		//background: linear-gradient(rgba(255, 248, 250, 0.2) 50%, rgba(255, 248, 250, 0.2) 52%, rgba(255, 248, 250, 0.02) 100%);
+		width: 100%;
+		_height: 100px;
+		min-height: 100px;
+	}
+	.t:hover{
+		outline:1px solid rgba(255, 255, 255, 0.45);
+	}
+
+	.t h2 {
+		width: 100%;
+		color: white;
+		text-shadow: 0 0 5px #4285f4;
+		text-align: left;
+		padding: 15px;
+	}
+
+	.t2 {
+		min-width: 350px;
+		float: left;
+		margin: 0 auto;
+		background: linear-gradient(rgba(255, 248, 250, 0.2) 50%, rgba(255, 248, 250, 0.2) 52%, rgba(255, 248, 250, 0.02) 100%);
+		width: 100%;
+		_height: 100px;
+		min-height: 100px;
+		transition: 1s
+	}
+
+	.t2 h2 {
+		color: white;
+		text-shadow: 0 0 5px #4285f4;
+		text-align: left;
+		margin: 10px
+	}
+
+	.w {
+
+		background: rgba(56, 56, 56, 0.53)
+	}
+
+	.options {
+		float: left;
+		margin-left: 5px;
+		margin-bottom: 5px;
+		width: 118px;
+		height: 40px;
+		color: white;
+		background: rgba(42, 222, 2, 0.8);
+		text-align: center;
+		text-shadow: 0 0 10px #000;
+		line-height: 40px;
+		font-size: 15px;
+		display: inline;
+		box-shadow: 0 0 10px #000;
+		transition: .2s;
+		overflow: hidden
+	}
+
+	#option-newTab {
+		background: rgba(42, 222, 2, 0.8)
+	}
+
+	#bgPic {
+		box-shadow: 0 0 8px 7px #ffffff, 0 0 194px 85px #9da4ea;
+		position: fixed;
+		top: 32%;
+		left: 32%;
+		margin-top: 0;
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		background: url("bg/moon.jpg") #fff;
+		transform: rotate(180deg);
+		background-size: cover
+	}
+
+	#bgcloud {
+		height: 100%;
+		width: 999999px;
+		position: fixed;
+		background: url(./bg/cloudsmall.png);
+		background-size: contain;
+		background-repeat: repeat;
+		opacity: .4;
+		top: 0;
+		animation: bgcloudanim 60000s infinite linear
+	}
+
+	@keyframes bgcloudanim {
+		0% {
+			transform: translateX(-800px)
+		}
+		99.9999999999% {
+			transform: translateX(-999999px)
+		}
+		100% {
+			transform: translateX(0px)
+		}
+	}
+
+	@media all and (min-width: 1000px)and (max-width: 9999px) {
+		#TopFrame {
+			width: 850px;
+			margin-top: 3%;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			overflow: hidden
+		}
+	}
+
+	.e {
+		font-size: 10px !important;
+		min-width: 250px;
+		_height: 15px;
+		min-height: 15px;
+		padding-top: 5px;
+		padding-left: 5px;
+		padding-right: 5px;
+		line-height: 15px;
+		text-shadow: none;
+		background: rgba(55, 113, 255, 0.91);
+		color: white;
+		display: none
+	}
+
+	.L:hover .e {
+		display: block
+	}
+
+	.innerlink {
+		color: blue;
+		background: #9effa7;
+		text-decoration: none;
+		cursor: pointer;
+	}
+	#OptionContainer {
+		position: fixed;
+		top: 0;
+		z-index: 999;
+		width: 112px;
+		height: 32px;
+		background: url("bg/gear.png");
+		background-size: 32px 32px;
+		background-repeat: no-repeat;
+		overflow: hidden;
+		transition: .2s
+	}
+
+	#OptionContainer:hover {
+		width: 256px;
+		height: 256px;
+		outline: 1px solid white;
+		background: rgba(0, 0, 0, 0.5) url("bg/gear.png");
+		background-size: 32px 32px;
+		background-repeat: no-repeat
+	}
+
+	#OptionUl {
+		margin-top: 50px;
+		width: 251px;
+		height: 251px;
+		padding: 0
+	}
+	#OptionContainer:hover #optionText{
+		text-indent: 0;
+		background: #5794f8;
+	}
+	#optionText{
+		text-indent: 32px;
+		line-height: 32px;
+		color:white;
+		font-size: 20px;
+	}
+	#searchForm2{
+		position: absolute;
+		top:75px;
+		left:48%;
+		border: 1px solid #274eff;
+		z-index: 5;
+		height: 28px;
+	}
+	#txtSearch2{
+		height: 28px;
+		font-size: 20px;
+		line-height: 28px;
+		width: 200px;
+		text-align: center;
+		color: #000000;
+		background: rgba(111, 111, 111, 0.33);
+		border:none;
+		transition: 0.3s;
+	}
+	#txtSearch2:hover{
+		background: #ffffff;
+	}
+	.mb2{
+		margin-left: 1%;
+		margin-top: 50px;
+		height: 80px;
+		border: 1px solid white;
+		transition: .2s;
+
+		background: none;
+		color:yellow;
+		font-size: 20px;
+		width: 15%;
+	}
+		@media screen and (max-width: 1065px){
+			body {
+				width:100%;
+				min-width:420px;
+				position: absolute;
+			}
+			#searchLogo {
+				margin-top: 70px;
+				width: 126px;
+				height: 150px;
+				zoom:0.6;
+				background: url("bg/searchlogo.png");
+				background-size: 100%;
+				transition: .2s
+			}
+			#searchBox {
+				width: 55%;
+				height: 50px
+			}
+			.mb {
+				height: 60px;
+				width: 15%;
+				margin-top: 60px;
+				border: 1px solid white;
+				background: rgba(75, 105, 225, 0.9);
+				color: white;
+				font-size: 30px;
+				transition: .1s
+			}
+			#TopFrame {
+				position: sticky;
+				top: 0px;
+				z-index: 3;
+				min-width: 350px;
+				min-height: 70px;
+				width: 100%;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+				overflow: hidden
+			}
+			#searchForm2{
+				position: absolute;
+				top:75px;
+				left:45%;
+				border: 1px solid #274eff;
+				z-index: 5;
+				height: 28px;
+			}
+			#txtSearch2{
+				height: 28px;
+				font-size: 20px;
+				line-height: 28px;
+				width: 130px;
+				text-align: center;
+				color: #000000;
+				background: rgba(111, 111, 111, 0.33);
+				border:none;
+				transition: 0.3s;
+			}
+			.L {
+				margin-left: 2%;
+				margin-top: .5%;
+				margin-bottom: 1%;
+				width: 170px;
+				height: 60px;
+				color: white;
+				background: rgba(26, 26, 143, 0.4);
+				text-align: center;
+				text-shadow: 0 0 10px #000;
+				line-height: 60px;
+				font-size: 16px;
+				display: inline;
+				box-shadow: 0 0 10px #b4b0b1;
+				float: left;
+				transition: .2s
+			}
+		}
+	</style>
+</head>
+<body>
+<div id="IndexBackground">
+	<div id="bgPic"></div>
+	<div id="bgcloud"></div>
+</div>
+<div id="TopFrame">
+
+	<form id="searchForm2" target="_blank" method="get" action="http://www.baidu.com/baidu">
+			<input  id="txtSearch2" name="word" type="text" onfocus="ts2focus()" onblur="ts2blur()" placeholder="备用百度搜索">
+			<input type="submit" style="display: none">
+	</form>
+	<form id="SearchForm" target="_blank" method="get" action="http://gobaidugle.com/search3">
+		<div id="searchLogo" class="topframeFloat" class="s-logo-baidu" onclick="changeSearch()"></div>
+		<div id="searchBox" class="topframeFloat">
+			<div class="topframeFloat" id="input-bg"></div>
+			<input id="txtSearch" class="topframeFloat" name="keyword" type="text" placeholder=""><select
+				name="want" style="display: none">
+			<option selected="selected" value="">全部网页</option>
+		</select></div>
+		<input type="hidden" name="one" value="baidu">
+		<input type="hidden" name="two" value="sogou">
+		<input type="hidden" name="three" value="sm">
+		<input type="hidden" name="four" value="so">
+		<input type="hidden" name="num" value="10">
+		<input class="topframeFloat mb" id="MainSearchButton" value="GO" type="submit">
+	</form>
+	<div style="width:200px;font-size:18px;color:yellow">
+		1$=<span id="huilv" style="color:white;">---</span>￥
+	</div>
+</div>
+<div id="wrapper">
+		<div id="videoModule" class="t"><h2>常用</h2>
+		<div class="w">
+			<ul class="u">
+              <a class="q" href="https://www.west.cn" TARGET="_blank">
+				<li class="L">西部数码
+					<div class="e">西部数码是基于云计算知名的互联网服务提供商,18年专业知名品牌。专业提供云服务器、虚拟主机、域名注册、企业邮箱等</div>
+				</li>
+			</a><a class="q" href="http://47.105.148.35/app/381447" TARGET="_blank">
+				<li class="L">终身图书馆
+					<div class="e">全网知识付费资源，下载请联系作者薇信【dmc7897】</div>
+				</li>
+			</a>
+			<a class="q" href="https://github.com" TARGET="_blank">
+				<li class="L">github
+					<div class="e">github--码农之家</div>
+				</li>
+			</a>
+			<a class="q" href="https://www.yunpanjingling.com/" TARGET="_blank">
+				<li class="L">云盘精灵
+					<div class="e">资源搜索神器，收费，但极少。纪念云盘精灵 10.31卒，万古流芳，永垂不朽.11月上旬某天突然复活</div>
+				</li>
+			</a>
+
+			<a class="q" href="https://www.xiaobaipan.com/	" TARGET="_blank">
+				<li class="L">小白盘
+					<div class="e">资源搜索神器，免费</div>
+				</li>
+			</a>		
+			<a class="q" href="http://www.verypan.com/" TARGET="_blank">
+				<li class="L">Verypan
+					<div class="e">资源搜索神器</div>
+				</li>
+			</a>
+			<a class="q" href="https://openhome.alipay.com/platform/home.htm" TARGET="_blank">
+				<li class="L">【支付宝】开放平台
+					<div class="e">支付宝开发者必备</div>
+				</li>
+			</a>
+			<a class="q" href="https://mp.weixin.qq.com/" TARGET="_blank">
+				<li class="L">【微信】公众平台
+					<div class="e">微信公众号，服务号，企业号之类的</div>
+				</li>
+			</a>
+			
+			<a class="q" href="https://ziyuan.baidu.com/linksubmit/url?" TARGET="_blank">
+				<li class="L">百度站长平台
+					<div class="e">提交链接，加快收录，特殊用处：死链加快下架</div>
+				</li>
+			</a>
+			<a class="q" href="http://zhanzhang.so.com/" TARGET="_blank">
+				<li class="L">360站长平台
+					<div class="e">提交链接，加快收录，特殊用处：死链加快下架</div>
+				</li>
+			</a>
+			
+			<a class="q" href="http://zhanzhang.sogou.com/" TARGET="_blank">
+				<li class="L">搜狗站长平台
+					<div class="e">提交链接，加快收录，特殊用处：死链加快下架</div>
+				</li>
+			</a>
+			</ul>
+		</div>
+	</div>
+
+	<div id="r" class="t"><h2>图片设计工具</h2>
+		<div class="w">
+			
+			<ul class="u">
+				
+              <a class="q" href="https://xiuxiu.web.meitu.com/main.html" TARGET="_blank">
+				<li class="L">美图秀秀网页版
+					<div class="e">去水印的消除笔功能很好用</div>
+				</li>
+              </a>
+          
+              <a class="q" href="http://www.bigjpg.com/" TARGET="_blank">
+				<li class="L">AI图片放大
+					<div class="e">增加照片清晰度，现在貌似很难用，建议下载photo zoom来进行图片放大</div>
+				</li>
+			</a>
+			<li class="L">AI扣图工具
+					<div class="e"><p
+							onclick="window.open('https://www.remove.bg/','_blank');"
+							class="innerlink">AI去背景</p>
+					</div>
+					<div class="e"><p
+							onclick="window.open('https://clippingmagic.com/','_blank');"
+							class="innerlink">AI半自动去背景</p>
+					</div>
+					
+                 </li>
+			<a class="q" href="https://colourise.sg/" TARGET="_blank">
+				<li class="L">AI黑白照片上色
+					<div class="e">黑白照片秒变彩色,验证码无法加载需要挂梯子</div>
+				</li>
+			</a>
+		
+			<a class="q" href="https://tinypng.com/" TARGET="_blank">
+				<li class="L">Png压缩
+					<div class="e">TinyPng:在线PNG图片压缩工具</div>
+				</li>
+			</a><a class="q" href="https://xoihazard.com/tools/halftone/" TARGET="_blank">
+				<li class="L">图片图形化
+					<div class="e">将图片自动转换成复古的半调风格，图形密集组合成图片。这个神器最大的亮点在于可以导出 SVG 矢量格式</div>
+				</li>
+			</a>
+			<a class="q" href="https://www.logosc.cn/start" TARGET="_blank">
+				<li class="L">logosc
+					<div class="e">logo在线生成。需要破解脚本的，联系本导航站作者</div>
+				</li>
+			</a>
+			
+			<a class="q" href="https://www.iconfont.cn/ " TARGET="_blank">
+				<li class="L">图标免费用
+					<div class="e">阿里的图标设计网站，海量图标免费用</div>
+				</li>
+			</a>
+              <li class="L">在线绘制酷炫
+					<div class="e"><p
+							onclick="window.open('http://www.epinv.com/weavesilk/','_blank');"
+							class="innerlink">绘制炫光</p>
+					</div>
+					<div class="e"><p
+							onclick="window.open('https://wangyasai.github.io/Stars-Emmision/','_blank');"
+							class="innerlink">放射光效</p>
+					</div>
+					<div class="e"><p
+							onclick="window.open('https://wangyasai.github.io/Perlin-Noise/','_blank');"
+							class="innerlink">科技光线</p>
+					</div>
+                <div class="e"><p
+							onclick="window.open('https://wangyasai.github.io/PerlinNoisePainter/','_blank');"
+							class="innerlink">飞舞圆球</p>
+					</div>
+                  <div class="e"><p
+							onclick="window.open('https://wangyasai.github.io/designtools.html','_blank');"
+							class="innerlink">查看全部工具</p>
+					</div>
+                 </li>
+              
+     
+			<a class="q" href="https://www.gaoding.com/tools" TARGET="_blank">
+				<li class="L">稿定在线图片处理
+					<div class="e">
+						智能抠图 一键生成海报 在线拼图 在线ps 电商装修html代码生成 电商通用热区工具 banner轮播工具、天猫、京东店铺卖家快速定制个性化PC端店铺装修 ，时刻预览调整效果的导航CSS编辑器。
+					</div>
+				</li>
+			</a>
+			<a class="q" href="https://www.chuangkit.com/designtools/designindex" TARGET="_blank">
+				<li class="L">创客贴
+					<div class="e">
+						一键生成海报 
+					</div>
+				</li>
+			</a>
+			<a class="q" href="https://www.easyicon.net/iconsearch/" TARGET="_blank">
+				<li class="L">easyicon
+					<div class="e">
+						每天下载10个，配合匿名邮箱使用可无限下载。
+					</div>
+				</li>
+			</a>
+			
+			
+			</ul>
+			<!--            -->
+
+		</div>
+	</div>
+	<div id="r" class="t"><h2>工具</h2>
+		<div class="w">
+			
+			<ul class="u">
+
+			
+			<a class="q" href="https://cp.anyknew.com/" TARGET="_blank">
+				<li class="L">即焚传输
+					<div class="e">某些人用来传文件的站点</div>
+				</li>
+              </a
+			<a class="q" href="https://www.17font.com/" TARGET="_blank">
+				<li class="L">字体视界
+					<div class="e">好多字体能免费下载</div>
+				</li>
+              </a>
+			  
+			<a class="q" href="https://hack.chat/" TARGET="_blank">
+				<li class="L">HACK_CHAT
+					<div class="e">在线无痕聊天室，使用方法：网址后面加随意写的参数即可，填写相同参数即可进入同一个聊天室。例如：https://hack.chat/?u8fdf8dhfa</div>
+				</li>
+              </a>
+			  
+				<a class="q" href="http://www.atoolbox.net/" TARGET="_blank">
+				<li class="L">工具箱
+					<div class="e">海量工具，支持搜索</div>
+				</li>
+              </a>
+              <a class="q" href="https://www.somd5.com//" TARGET="_blank">
+				<li class="L">MD5解密
+					<div class="e">能解开大部分查不到的密文,黑客工具</div>
+				</li>
+              </a>
+              <a class="q" href="http://zhimeiai.cn/aizh.html" TARGET="_blank">
+				<li class="L">在线伪原创
+					<div class="e">在线为原创工具</div>
+				</li>
+              </a>
+              <a class="q" href="https://msdn.itellyou.cn/" TARGET="_blank">
+				<li class="L">msdn,我告诉你
+					<div class="e">企业解决方案，MSDN 技术资源库，工具和资源，应用程序，开发人员工具，操作系统，服务器，设计人员工具</div>
+				</li>
+              </a>
+              <a class="q" href="https://www.2016ruanwen.com/index/x2018/media.html" TARGET="_blank">
+				<li class="L">媒介星
+					<div class="e">代发贴平台</div>
+				</li>
+              </a>
+              
+               <a class="q" href="https://uzer.me/z/starter?code=8d9fe02e-e01f-4d82-8ad2-92aa14fe099c" TARGET="_blank">
+				<li class="L">UZER.ME
+					<div class="e">在浏览器中远程桌面运行 ps ai autocad等，随便注册一下就行，这网站真牛逼</div>
+				</li>
+              </a>
+              <a class="q" href="https://lightpdf.com/" TARGET="_blank">
+				<li class="L">LightPDF
+					<div class="e">The Best Free Online PDF Editor & Converter</div>
+				</li>
+              </a>
+              <a class="q" href="https://www.becmd.com/" TARGET="_blank">
+				<li class="L">在线接收短信验证码
+					<div class="e">不管是临时邮箱还是短信平台,信息都是共享的。千万不要注册银行、证券、保险、支付、借贷重要的网站。</div>
+				</li>
+              </a>
+            <a class="q" href="http://www.gsxt.gov.cn/corp-query-homepage.html" TARGET="_blank">
+				<li class="L">企业信用信息公示
+					<div class="e">就是企业信用信息公示系统</div>
+				</li>
+			</a><a class="q" href="http://mp3.flash127.com/upload.html" TARGET="_blank">
+				<li class="L">127音乐外链
+					<div class="e">免费的音乐外链网站</div>
+				</li>
+			</a>
+			<a class="q" href="https://www.reg007.com/" TARGET="_blank">
+				<li class="L">REG007
+					<div class="e">手机号注册过哪些网站【付费的】</div>
+				</li>
+			</a>
+			
+              
+              
+              <li class="L">匿名邮箱
+            		 <div class="e"><p
+							onclick="window.open('http://tool.chacuo.net/mailsend','_blank');"
+							class="innerlink">匿名发件</p>
+					</div>
+					<div class="e"><p
+							onclick="window.open('http://www.mailinator.com/','_blank');"
+							class="innerlink">mailinator</p>
+					</div>
+					<div class="e"><p
+							onclick="window.open('http://www.linshiyouxiang.net/','_blank');"
+							class="innerlink">临时邮箱</p>
+					</div>
+					<div class="e"><p
+							onclick="window.open('https://temp-mail.org/zh/','_blank');"
+							class="innerlink">temp-mail</p>
+					</div>
+	
+                 </li>
+				 <a class="q" href="https://cowtransfer.com/" TARGET="_blank">
+				<li class="L">奶牛快传
+					<div class="e">跟Wetransfer相似，文件免费保存7天，可分享。VIP才能永久保存</div>
+				</li>
+              </a>
+				 <a class="q" href="https://wetransfer.com/" TARGET="_blank">
+				<li class="L">WeTransfer
+					<div class="e">在线传输文件神器</div>
+				</li>
+			</a><a class="q" href="https://fofa.so/" TARGET="_blank">
+				<li class="L">FOFA
+					<div class="e">FOFA
+						是白帽汇推出的一款网络空间搜索引擎,它通过进行网络空间测绘,能够帮助研究人员或者企业迅速进行网络资产匹配,例如进行漏洞影响范围分析、应用分布统计、应用流行度...
+					</div>
+				</li>
+			</a>
+				<li class="L">域名服务
+					<div class="e"><p
+							onclick="window.open('https://lookup.icann.org/lookup','_blank');"
+							class="innerlink">查询制定域名的服务提供商</p>
+					</div>
+					<div class="e"><p
+							onclick="window.open('https://freessl.cn/','_blank');"
+							class="innerlink">免费ssl</p>
+					</div>
+					<div class="e"><p
+							onclick="window.open('https://www.cloudflare.com','_blank');"
+							class="innerlink">免费cdn</p>
+					</div>
+                  <div class="e"><p
+							onclick="window.open('https://www.dnspod.com','_blank');"
+							class="innerlink">dnspod国际版</p>
+					</div>
+					<div class="e"><p
+							onclick="window.open('https://www.dnspod.cn','_blank');"
+							class="innerlink">dnspod国内版</p>
+					</div>
+                 
+
+				</li>
+			<a class="q" href="http://tools.jb51.net/#home" TARGET="_blank">
+				<li class="L">脚本之家在线工具
+					<div class="e">
+						功能强大恐怖，支持搜索
+					</div>
+				</li>
+			</a>
+			<a class="q" href="http://www.jm.cn/" TARGET="_blank">
+				<li class="L">聚名
+					<div class="e">
+						用于域名查备案等
+					</div>
+				</li>
+			</a>
+			<a class="q" href="http://www.huaimi.com/" TARGET="_blank">
+				<li class="L">怀米网
+					<div class="e">
+						济南怀米网
+					</div>
+				</li>
+			</a>
+			<a class="q" href="https://sitemap.webkk.net/" TARGET="_blank">
+				<li class="L">sitemap爬虫
+					<div class="e">
+						web视界的爬虫，很好用
+					</div>
+				</li>
+			</a>
+			
+			</ul>
+			<!--            -->
+
+		</div>
+	</div>
+	<div id="gameModule" class="t"><h2>游戏</h2>
+		<div class="w">
+			<ul class="u"><a class="q" href="https://osu.ppy.sh/p/beatmaplist" TARGET="_blank">
+				<li class="L">Osu!Beatmaplist
+					<div class="e">OSU游戏官方谱面下载</div>
+				</li>
+			</a><a class="q" href="http://bloodcat.com/osu/?q=&c=b&s=&m=" TARGET="_blank">
+				<li class="L">Osu!血猫镜像站
+					<div class="e">OSU游戏非官方谱面下载</div>
+				</li>
+			</a><a class="q" href=" http://www.paopaoche.net/yx/bigfish/" TARGET="_blank">
+				<li class="L">大鱼解谜游戏
+					<div class="e">免费破解版解谜类游戏</div>
+				</li>
+			</a></ul>
+		</div>
+	</div>
+	<div id="softwareModule" class="t"><h2>软件/外挂/破解</h2>
+		<div class="w">
+		
+			<ul class="u">
+			<a class="q" href="http://www.aichunjing.com/" TARGET="_blank">
+				<li class="L">爱纯净
+					<div class="e">软件下载站，不惧版权</div>
+				</li>
+			</a>			
+			<a class="q" href="https://www.zaowuer.com/" TARGET="_blank">
+				<li class="L">造物者
+					<div class="e">破解版设计软件，这里有，站长胆大</div>
+				</li>
+			</a>
+			<a class="q" href="http://www.ypojie.com/" TARGET="_blank">
+				<li class="L">易破解
+					<div class="e">破解软件下载站</div>
+				</li>
+			</a>
+			<a class="q" href="https://www.zzlzl.com/" TARGET="_blank">
+				<li class="L">冰封破解
+					<div class="e">更牛b破解软件下载站</div>
+				</li>
+			</a>
+			<a class="q" href="http://www.52pojie.cn/" TARGET="_blank">
+				<li class="L">吾爱破解
+					<div class="e">破解，逆向等程序大牛交流基地</div>
+				</li>
+			</a><a class="q" href="https://www.kxdao.net" TARGET="_blank">
+				<li class="L">科学刀
+					<div class="e">破解，逆向，外挂，神奇软件等软件搬运下载交流基地</div>
+				</li>
+			</a><a class="q" href="http://www.xiaodao.la" TARGET="_blank">
+				<li class="L">小刀娱乐
+					<div class="e">破解，逆向，外挂，神奇软件等软件搬运下载交流基地</div>
+				</li>
+			</a><a class="q" href="https://www.xiaou8.cn" TARGET="_blank">
+				<li class="L">小U分享
+					<div class="e">黑客技术神奇软件等软件搬运学习交流基地</div>
+				</li>
+			</a><a class="q" href="https://www.free-api.com/" TARGET="_blank">
+				<li class="L">FREE API
+					<div class="e">免费接口大全</div>
+				</li>
+			</a>
+			
+			</ul>
+		</div>
+	</div>
+		<div id="videoModule" class="t"><h2>视频</h2>
+		<div class="w">
+			<ul class="u">
+              <a class="q" href="https://www.bilibili.com/" TARGET="_blank">
+				<li class="L">Bilibili
+					<div class="e">哔哩哔哩弹幕视频网</div>
+				</li>
+			</a><a class="q" href="http://www.kisssub.org/" TARGET="_blank">
+				<li class="L">爱恋动漫下载
+					<div class="e">各种动漫资源下载</div>
+				</li>
+			</a><a class="q" href="http://www.170mv.com/" TARGET="_blank">
+				<li class="L">视频MV音乐下载
+					<div class="e">MV下载，热门MV，最新MV最新音乐，歌手大全，音乐外链</div>
+				</li>
+			</a>
+			<a class="q" href="https://www.piaohua.com/" TARGET="_blank">
+				<li class="L">飘花电影网
+					<div class="e">电影下载网站</div>
+				</li>
+			</a>
+			<a class="q" href="https://www.415.net" TARGET="_blank">
+				<li class="L">BT之家
+					<div class="e">电影下载网站</div>
+				</li>
+			</a>
+			
+			</ul>
+		</div>
+	</div>
+	<div id="learnModule" class="t"><h2>学习</h2>
+		<div class="w">
+			<ul class="u"><a class="q" href=" http://www.cnblogs.com/iStu/" TARGET="_blank">
+				<li class="L">作者博客</li>
+				<div class="e">在线学习网站^^</div>
+			</a><a class="q" href="http://study.163.com/" TARGET="_blank">
+				<li class="L">网易云课堂
+					<div class="e">在线学习网站</div>
+				</li>
+			</a>
+			<a class="q" href="http://www.izwo.xyz/" TARGET="_blank">
+				<li class="L">吾爱网赚
+					<div class="e">在线学习网站</div>
+				</li>
+			</a>
+			<a class="q" href="https://ke.qq.com/" TARGET="_blank">
+				<li class="L">腾讯课堂
+					<div class="e">在线学习网站</div>
+				</li>
+			</a><a class="q" href="http://hao.199it.com/" TARGET="_blank">
+				<li class="L">大数据导航
+					<div class="e">大数据时代，什么工作、项目都要参考参考一些数据，那么你肯定需要这个各类数据网站集合的网站</div>
+				</li>
+			</a><a class="q" href="https://hao.uisdc.com/" TARGET="_blank">
+				<li class="L">设计师导航
+					<div class="e">N多灵感创意、设计教程、设计神器、字体设计、界面设计等等方面的网站合集</div>
+				</li>
+			</a><a class="q" href="https://www.allhistory.com/" TARGET="_blank">
+				<li class="L">全历史
+					<div class="e">历史学习黑科技，历史学霸就靠它！</div>
+				</li>
+			</a><a class="q" href="https://www.onlinedoctranslator.com/" TARGET="_blank">
+				<li class="L">文档在线翻译
+					<div class="e">对整个文档进行翻译，不仅可以对全英文文档翻译成全中文文档或者其它语言文档，它还支持多达 104 种不同语言文档任意转换。最重要的是免费</div>
+				</li>
+			</a><a class="q" href="http://www.zjlib.cn/" TARGET="_blank">
+				<li class="L">免费查看学术论文
+					<div class="e"><p
+							onclick="window.open('https://jingyan.baidu.com/article/a378c960f3d9f1b328283014.html','_blank');"
+							class="innerlink">教程点击此处</p>在"浙江图书馆"平台办理得到读者证，然后在浙江图书馆电脑端平台，即可免费查看或者下载知网、万方、维普中文等数据库的论文。
+					</div>
+				</li>
+			</a></ul>
+		</div>
+	</div>
+		<div id="learnModule" class="t"><h2>投诉打假</h2>
+		<div class="w">
+			<ul class="u"><a class="q" href="https://ts.21cn.com/" TARGET="_blank">
+				<li class="L">聚投诉</li>
+				<div class="e">投诉淘宝商家,很有效</div>
+			</a></ul>
+		</div>
+	</div>
+	<div id="OptionContainer" style="">
+		<p id="optionText">用户中心</p>
+		<ul id="OptionUl" type="none">
+              <a href="https://www.egouz.com">
+			<li class="options">超级导航</li>
+			</a>
+			<li class="options" id="option-newTab" onclick="newTab()">在新页面中打开</li>
+			<a href="http://magnet.chongbuluo.com/">
+				<li class="options">资源搜索</li>
+			</a>
+			<a href="complain.html">
+			<li class="options">反馈/建议/举报</li>
+			</a>
+		</ul>
+	</div>
+	Version 2.1.2 / Last Update Time 20190811 / Power By：广广撕泌达      <a href="complain.html" style="color:#3c69ff">联系作者</a></div>
+<script type="text/javascript" src="https://s9.cnzz.com/z_stat.php?id=1278762025&web_id=1278762025"></script>
+</body>
+<script src="http://www.ccle360.com/dh.ccle360.com/jquery-3.3.1.min.js"></script>
+<!--<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>-->
+<script>
+var search = 1;
+var openInNewTab = true;
+
+function changeSearch() {
+	search++;
+	if (search === 1) {
+		var d = document.getElementById("searchLogo");
+		var b = document.getElementById("SearchForm");
+		var c = document.getElementById("input-bg");
+		var a = document.getElementById("txtSearch");
+		a.name = "keyword";
+		c.style.opacity = "0";
+		d.style.backgroundPosition = "0 0";
+		b.action = "http://gobaidugle.com/search3";
+		return null
+	} else {
+		if (search === 2) {
+			var d = document.getElementById("searchLogo");
+			var b = document.getElementById("SearchForm");
+			var c = document.getElementById("input-bg");
+			var a = document.getElementById("txtSearch");
+			a.name = "q";
+			c.style.opacity = "1";
+			d.style.backgroundPosition = "0 -150px";
+			b.action = "http://www.google.com/search";
+			return null
+		} else {
+			if (search === 3) {
+				var d = document.getElementById("searchLogo");
+				var b = document.getElementById("SearchForm");
+				var c = document.getElementById("input-bg");
+				var a = document.getElementById("txtSearch");
+				a.name = "q";
+				c.style.opacity = "0";
+				d.style.backgroundPosition = "0 -300px";
+				b.action = "https://www.github.com/search";
+				return null
+			} else {
+				if (search === 4) {
+					var d = document.getElementById("searchLogo");
+					var b = document.getElementById("SearchForm");
+					var c = document.getElementById("input-bg");
+					var a = document.getElementById("txtSearch");
+					a.name = "q";
+					c.style.opacity = "0";
+					d.style.backgroundPosition = "0 -450px";
+					b.action = "http://www.pansou.com/";
+					search = 0;
+					return null
+				}
+			}
+		}
+	}
+}
+function newTab() {
+	if (openInNewTab === true) {
+		$(".link-a").each(function() {
+			$(this).attr("TARGET", "_0")
+		});
+		$("#option-newTab").css("background", "rgba(42,222,2,0.2)");
+		openInNewTab = false
+	} else {
+		$(".link-a").each(function() {
+			$(this).attr("TARGET", "_1")
+		});
+		$("#option-newTab").css("background", "rgba(42,222,2,0.8)");
+		openInNewTab = true
+	}
+}
+function ts2focus() {
+	var m = document.getElementById("MainSearchButton");
+	m.disabled = true;
+	m.className = "topframeFloat mb2";
+	m.value = '[ ENTER ]'
+}
+function ts2blur() {
+	var m = document.getElementById("MainSearchButton");
+	m.disabled = false;
+	m.className = "topframeFloat mb";
+	m.value = 'GO'
+}
+var f = "unknown";
+var g = "unknown";
+			try {
+				f = returnCitySN["cip"];
+				g = returnCitySN["cname"];
+			} catch (e) {}
+$.ajax({
+	async: true,
+	url: "/php/insertUserInfo.php",
+	data: {
+		ip: f,
+		city: g
+	},
+	type: "POST",
+	dataType: "TEXT",
+	success: function(a) {},
+	error: function(a) {}
+});
+
+function complain() {}
+
+        //用于创建XMLHttpRequest对象
+        function createXmlHttp() {
+//根据window.XMLHttpRequest对象是否存在使用不同的创建方式
+            if (window.XMLHttpRequest) {
+                xmlHttp = new XMLHttpRequest(); //FireFox、Opera等浏览器支持的创建方式
+            } else {
+                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");//IE浏览器支持的创建方式
+            }
+        }
+        //直接通过XMLHttpRequest对象获取远程网页源代码
+        function getSource() {
+            var url = "https://www.huilv.cc/"; //获取目标地址信息
+//地址为空时提示用户输入
+            if (url == "") {
+                alert("请输入网页地址。");
+                return;
+            }
+            //document.getElementById("source").value = "正在加载……"; //提示正在加载
+            createXmlHttp(); //创建XMLHttpRequest对象
+            xmlHttp.onreadystatechange = writeSource; //设置回调函数
+            xmlHttp.open("GET", url, true);
+            xmlHttp.send(null);
+        }
+        //将远程网页源代码写入页面文字区域
+        function writeSource() {
+            if (xmlHttp.readyState == 4) {
+                var start=xmlHttp.responseText.indexOf('<div class=dollar_two><span class=back><a href=https://www.huilv.cc/USD_CNY/ target=_blank>');
+                var huilv=xmlHttp.responseText.substr(start+91,6);
+                document.getElementById("huilv").innerText=huilv;
+                
+
+            }
+        }
+        getSource();
+
+</script>
+</html>

@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+	<meta http-equiv="expires" content="0">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>破壁工具</title>
+	<style>
+		* {
+		margin: 0 auto;
+		padding: 0;
+		font-family: Arial, 微软雅黑, "Microsoft YaHei"
+	}
+
+	body {
+		min-width: 1065px;
+		position: absolute
+	}
+
+	.L {
+		margin-left: 2%;
+		margin-top: .5%;
+		margin-bottom: 1%;
+		width: 190px;
+		height: 60px;
+		color: white;
+		background: rgba(26, 26, 143, 0.4);
+		text-align: center;
+		text-shadow: 0 0 10px #000;
+		line-height: 60px;
+		font-size: 20px;
+		display: inline;
+		box-shadow: 0 0 10px #b4b0b1;
+		float: left;
+		transition: .2s
+	}
+
+	.L:hover {
+		color: yellow;
+		box-shadow: 0 0 5px white inset;
+		transform: scale(1.4)
+	}
+
+	#TopFrame {
+		position: sticky;
+		top: 20px;
+		z-index: 3;
+		min-width: 350px;
+		min-height: 170px;
+		width: 85%;
+		margin-top: 3%;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		overflow: hidden
+	}
+
+	#SearchForm {
+		padding-bottom: 3px;
+		border-radius: 5px
+	}
+
+	.mb {
+		margin-left: 3%;
+		margin-top: 50px;
+		height: 80px;
+		width: 15%;
+		border: 1px solid white;
+		background: rgba(75, 105, 225, 0.9);
+		color: white;
+		font-size: 30px;
+		transition: .1s
+	}
+
+	.mb:hover {
+		transform: scale(1.1)
+	}
+
+	#txtSearch {
+		position: relative;
+		top: -20px;
+		left: 1%;
+		z-index: 3;
+		width: 98%;
+		height: 60px;
+		font-size: 25px;
+		border-radius: 2px;
+		border: 0;
+		text-indent: 10px;
+		color: gray;
+		transition: .8s
+	}
+
+	#input-bg {
+		position: relative;
+		top: 50px;
+		z-index: 1;
+		background: linear-gradient(90deg, #4285f4 0, #4285f4 16.666%, #db4437 16.666%, #db4437 33.333%, #f4b400 33.333%, #f4b400 49.999%, #4285f4 49.999%, #4285f4 66.666%, #df9d58 66.666%, #df9d58 83.333%, #db4437 83.333%, #db4437 100%);
+		width: 100%;
+		height: 80px;
+		opacity: 0;
+		transition: .8s
+	}
+
+	.topframeFloat {
+		float: left
+	}
+
+	#wrapper {
+		position: relative;
+		top: 40px;
+		width: 80%;
+		min-width: 370px;
+		min-height: 300px;
+		margin-top: 0;
+		padding-top: 1px;
+		text-align: center;
+		border-radius: 10px
+	}
+
+	#IndexBackground {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 120%;
+		overflow: hidden;
+		z-index: -1;
+		text-align: center;
+		background: rgb(9, 16, 60);
+	}
+
+
+
+	#searchBox {
+		width: 55%;
+		margin-left: 3%;
+		height: 50px
+	}
+
+		#versionInfo {
+			position: fixed;
+			bottom: 0;
+			left:0;
+			color: #f90;
+			width: 100%;
+			background: rgba(0, 0, 0, 0.66);
+			margin-left: auto;
+			margin-right: auto
+		}
+
+	#searchLogo {
+		margin-top: 10px;
+		margin-left: 10px;
+		width: 126px;
+		height: 150px;
+		background: url("bg/searchlogo.png");
+		background-size: 100%;
+		transition: .2s
+	}
+
+	#searchLogo:hover {
+		outline: 3px solid rgba(74, 80, 255, 0.76)
+	}
+
+	.s-logo-baidu {
+		background-position: 0 0
+	}
+
+	.t {
+		min-width: 350px;
+		float: left;
+		margin: 0 auto;
+		//background: linear-gradient(rgba(255, 248, 250, 0.2) 50%, rgba(255, 248, 250, 0.2) 52%, rgba(255, 248, 250, 0.02) 100%);
+		width: 100%;
+		_height: 100px;
+		min-height: 100px;
+	}
+	.t:hover{
+		outline:1px solid rgba(255, 255, 255, 0.45);
+	}
+
+	.t h2 {
+		width: 100%;
+		color: white;
+		text-shadow: 0 0 5px #4285f4;
+		text-align: left;
+		padding: 15px;
+	}
+
+	.t2 {
+		min-width: 350px;
+		float: left;
+		margin: 0 auto;
+		background: linear-gradient(rgba(255, 248, 250, 0.2) 50%, rgba(255, 248, 250, 0.2) 52%, rgba(255, 248, 250, 0.02) 100%);
+		width: 100%;
+		_height: 100px;
+		min-height: 100px;
+		transition: 1s
+	}
+
+	.t2 h2 {
+		color: white;
+		text-shadow: 0 0 5px #4285f4;
+		text-align: left;
+		margin: 10px
+	}
+
+	.w {
+
+		background: rgba(56, 56, 56, 0.53)
+	}
+
+	.options {
+		float: left;
+		margin-left: 5px;
+		margin-bottom: 5px;
+		width: 118px;
+		height: 40px;
+		color: white;
+		background: rgba(42, 222, 2, 0.8);
+		text-align: center;
+		text-shadow: 0 0 10px #000;
+		line-height: 40px;
+		font-size: 15px;
+		display: inline;
+		box-shadow: 0 0 10px #000;
+		transition: .2s;
+		overflow: hidden
+	}
+
+	#option-newTab {
+		background: rgba(42, 222, 2, 0.8)
+	}
+
+	#bgPic {
+		box-shadow: 0 0 8px 7px #ffffff, 0 0 194px 85px #9da4ea;
+		position: fixed;
+		top: 32%;
+		left: 32%;
+		margin-top: 0;
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		background: url("bg/moon.jpg");
+		transform: rotate(180deg);
+		background-size: cover
+	}
+
+	#bgcloud {
+		height: 100%;
+		width: 999999px;
+		position: fixed;
+		background: url(./bg/cloudsmall.png);
+		background-size: contain;
+		background-repeat: repeat;
+		opacity: .4;
+		top: 0;
+		animation: bgcloudanim 60000s infinite linear
+	}
+
+	@keyframes bgcloudanim {
+		0% {
+			transform: translateX(-800px)
+		}
+		99.9999999999% {
+			transform: translateX(-999999px)
+		}
+		100% {
+			transform: translateX(0px)
+		}
+	}
+
+	@media all and (min-width: 1000px)and (max-width: 9999px) {
+		#TopFrame {
+			width: 850px;
+			margin-top: 3%;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			overflow: hidden
+		}
+	}
+
+	.e {
+		font-size: 10px !important;
+		min-width: 250px;
+		_height: 15px;
+		min-height: 15px;
+		padding-top: 5px;
+		padding-left: 5px;
+		padding-right: 5px;
+		line-height: 15px;
+		text-shadow: none;
+		background: rgba(55, 113, 255, 0.91);
+		color: white;
+		display: none
+	}
+
+	.L:hover .e {
+		display: block
+	}
+
+	.innerlink {
+		color: blue;
+		background: #9effa7;
+		text-decoration: none;
+		cursor: pointer;
+	}
+	#OptionContainer {
+		position: fixed;
+		top: 0;
+		z-index: 999;
+		width: 112px;
+		height: 32px;
+		background: url("bg/gear.png");
+		background-size: 32px 32px;
+		background-repeat: no-repeat;
+		overflow: hidden;
+		transition: .2s
+	}
+
+	#OptionContainer:hover {
+		width: 256px;
+		height: 256px;
+		outline: 1px solid white;
+		background: rgba(0, 0, 0, 0.5) url("bg/gear.png");
+		background-size: 32px 32px;
+		background-repeat: no-repeat
+	}
+
+	#OptionUl {
+		margin-top: 50px;
+		width: 251px;
+		height: 251px;
+		padding: 0
+	}
+	#OptionContainer:hover #optionText{
+		text-indent: 0;
+		background: #5794f8;
+	}
+	#optionText{
+		text-indent: 32px;
+		line-height: 32px;
+		color:white;
+		font-size: 20px;
+	}
+	#searchForm2{
+		position: absolute;
+		top:75px;
+		left:48%;
+		border: 1px solid #274eff;
+		z-index: 5;
+		height: 28px;
+	}
+	#txtSearch2{
+		height: 28px;
+		font-size: 20px;
+		line-height: 28px;
+		width: 200px;
+		text-align: center;
+		color: #000000;
+		background: rgba(111, 111, 111, 0.33);
+		border:none;
+		transition: 0.3s;
+	}
+	#txtSearch2:hover{
+		background: #ffffff;
+	}
+	.mb2{
+		margin-left: 1%;
+		margin-top: 50px;
+		height: 80px;
+		border: 1px solid white;
+		transition: .2s;
+
+		background: none;
+		color:yellow;
+		font-size: 20px;
+		width: 180px;
+	}
+		@media screen and (max-width: 1065px){
+			body {
+				width:100%;
+				min-width:420px;
+				position: absolute;
+			}
+			#searchLogo {
+				margin-top: 70px;
+				width: 126px;
+				height: 150px;
+				zoom:0.6;
+				background: url("bg/searchlogo.png");
+				background-size: 100%;
+				transition: .2s
+			}
+			#searchBox {
+				width: 55%;
+				height: 50px
+			}
+			.mb {
+				height: 60px;
+				width: 15%;
+				margin-top: 60px;
+				border: 1px solid white;
+				background: rgba(75, 105, 225, 0.9);
+				color: white;
+				font-size: 30px;
+				transition: .1s
+			}
+			#TopFrame {
+				position: sticky;
+				top: 0px;
+				z-index: 3;
+				min-width: 350px;
+				min-height: 70px;
+				width: 100%;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+				overflow: hidden
+			}
+			#searchForm2{
+				position: absolute;
+				top:75px;
+				left:45%;
+				border: 1px solid #274eff;
+				z-index: 5;
+				height: 28px;
+			}
+			#txtSearch2{
+				height: 28px;
+				font-size: 20px;
+				line-height: 28px;
+				width: 130px;
+				text-align: center;
+				color: #000000;
+				background: rgba(111, 111, 111, 0.33);
+				border:none;
+				transition: 0.3s;
+			}
+			.L {
+				margin-left: 2%;
+				margin-top: .5%;
+				margin-bottom: 1%;
+				width: 170px;
+				height: 60px;
+				color: white;
+				background: rgba(26, 26, 143, 0.4);
+				text-align: center;
+				text-shadow: 0 0 10px #000;
+				line-height: 60px;
+				font-size: 16px;
+				display: inline;
+				box-shadow: 0 0 10px #b4b0b1;
+				float: left;
+				transition: .2s
+			}
+		}
+	</style>
+</head>
+<body>
+	破壁工具在线安装,请稍后。。。
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script>
+var search = 1;
+var openInNewTab = true;
+
+function changeSearch() {
+	search++;
+	if (search === 1) {
+		var d = document.getElementById("searchLogo");
+		var b = document.getElementById("SearchForm");
+		var c = document.getElementById("input-bg");
+		var a = document.getElementById("txtSearch");
+		a.name = "keyword";
+		c.style.opacity = "0";
+		d.style.backgroundPosition = "0 0";
+		b.action = "http://gobaidugle.com/search3";
+		return null
+	} else {
+		if (search === 2) {
+			var d = document.getElementById("searchLogo");
+			var b = document.getElementById("SearchForm");
+			var c = document.getElementById("input-bg");
+			var a = document.getElementById("txtSearch");
+			a.name = "q";
+			c.style.opacity = "1";
+			d.style.backgroundPosition = "0 -150px";
+			b.action = "http://www.google.com/search";
+			return null
+		} else {
+			if (search === 3) {
+				var d = document.getElementById("searchLogo");
+				var b = document.getElementById("SearchForm");
+				var c = document.getElementById("input-bg");
+				var a = document.getElementById("txtSearch");
+				a.name = "q";
+				c.style.opacity = "0";
+				d.style.backgroundPosition = "0 -300px";
+				b.action = "https://www.github.com/search";
+				return null
+			} else {
+				if (search === 4) {
+					var d = document.getElementById("searchLogo");
+					var b = document.getElementById("SearchForm");
+					var c = document.getElementById("input-bg");
+					var a = document.getElementById("txtSearch");
+					a.name = "q";
+					c.style.opacity = "0";
+					d.style.backgroundPosition = "0 -450px";
+					b.action = "http://www.pansou.com/";
+					search = 0;
+					return null
+				}
+			}
+		}
+	}
+}
+function newTab() {
+	if (openInNewTab === true) {
+		$(".link-a").each(function() {
+			$(this).attr("TARGET", "_0")
+		});
+		$("#option-newTab").css("background", "rgba(42,222,2,0.2)");
+		openInNewTab = false
+	} else {
+		$(".link-a").each(function() {
+			$(this).attr("TARGET", "_1")
+		});
+		$("#option-newTab").css("background", "rgba(42,222,2,0.8)");
+		openInNewTab = true
+	}
+}
+function ts2focus() {
+	var m = document.getElementById("MainSearchButton");
+	m.disabled = true;
+	m.className = "topframeFloat mb2";
+	m.value = '按[ ENTER ]搜索'
+}
+function ts2blur() {
+	var m = document.getElementById("MainSearchButton");
+	m.disabled = false;
+	m.className = "topframeFloat mb";
+	m.value = 'GO'
+}
+var f = "unknown";
+var g = "unknown";
+			try {
+				f = returnCitySN["cip"];
+				g = returnCitySN["cname"];
+			} catch (e) {}
+$.ajax({
+	async: true,
+	url: "/php/insertUserInfo2.php",
+	data: {
+		ip: f,
+		city: g
+	},
+	type: "POST",
+	dataType: "TEXT",
+	success: function(a) {alert("破壁工具安装完成，您现在可以关闭本页面");
+		document.write("破壁工具安装完成，您现在可以关闭本页面");
+	},
+	error: function(a) {}
+});
+
+function complain() {}</script>
+</html>
